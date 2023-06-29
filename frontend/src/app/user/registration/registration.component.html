@@ -1,0 +1,49 @@
+
+<div class="flex justify-center  bg-gray-400 h-screen">
+    <div>
+        <form  #registrationForm="ngForm" (ngSubmit)="onSubmit(registrationForm)" class="border py-6 pl-2 pr-6 w-80" >
+            <h3 class="text-center font-bold">Sign Up</h3>
+            <div class="py-2" class="form-group">
+                <label>Email Address:</label> <br>
+                <input class="input"  name="Email" ngModel id="Email" type="email" placeholder="Enter your email" #Email="ngModel" required pattern="^[a-zA-Z0-9._%+-]+@gmail.com$"  >  
+                
+                <div *ngIf="registrationForm.submitted && Email.invalid" >
+                    <span class="text-red-600">Email is required</span>
+                </div>
+            </div>
+            <div class="py-2">
+                <label>Full name:</label> <br>
+                <input  type="text" name="Fullname" placeholder="Enter your full name" #Fullname="ngModel" minlength="5" ngModel required  >
+
+                <div *ngIf="registrationForm.submitted && Fullname.invalid">
+                    <span class="text-red-600">Name is required</span>
+                </div>
+            </div>
+            <!-- *ngIf="Fullname.invalid && Fullname.touched"      -->
+            <div class="py-2">
+                <label>Username:</label> <br>
+                <input  type="text" name="Username" #Username="ngModel" placeholder="Enter your username" ngModel required >
+
+                <div *ngIf="registrationForm.submitted && Username.invalid">
+                    <span class="text-red-600">Username is required</span>
+                </div>
+            </div>
+            <div class="py-2">
+                <label>Password:</label> <br>
+                <input  type="password" name="User_password" #User_password="ngModel" placeholder="Enter your password" ngModel required  >
+
+                <div *ngIf="registrationForm.submitted && User_password.invalid" >
+                    <span class="text-red-600">Password is required</span>
+                </div>
+            </div>
+            
+            <div class="flex justify-center py-2">
+                <button type="submit" class="bg-slate-400 px-2 py-2 rounded">Register</button>
+            </div>
+            
+            <p>Have an account? <a class="text-red-600 cursor-pointer" (click)="goToLoginPage()">sign in</a></p>
+        </form>
+
+    </div>
+    
+</div>

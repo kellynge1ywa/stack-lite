@@ -1,0 +1,23 @@
+
+<div class="bg-white -400">
+    <div class="mx-10 list-none flex justify-between py-3 ">
+      <!-- <div>
+        <!-- <h1>Uliza</h1> -->
+      <!-- </div> --> 
+      <h2 class="mt-2">Stack-lite</h2>
+      <div class="list-none flex pl-2 text-black " >
+       
+        <li><a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a></li>
+        <li class="pl-2 text-slate-100"><a [routerLink]="['/users/dashboard']" routerLinkActive="active">Dashboard</a></li>
+        <li class="pl-2"><a [routerLink]="['/questions']" routerLinkActive="active">Questions</a></li>
+        <li class="pl-2"><a [routerLink]="['/answers']" routerLinkActive="active">Answers</a></li>
+        <li class="pl-2"><a [routerLink]="['/products']" routerLinkActive="active">Tags</a></li>
+      </div>
+      <div>
+        <input class="rounded-lg border-6 hover:border-red-800" type="search" placeholder="search">
+      </div>
+      <div class="pr-14">
+        <li class="pl-10"><a [routerLink]="['/users/login']" routerLinkActive="active">Account</a></li>
+      </div>  
+    </div>
+  </div>

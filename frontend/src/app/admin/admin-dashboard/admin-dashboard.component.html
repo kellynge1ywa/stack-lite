@@ -1,0 +1,20 @@
+
+
+<div class="bg-gray-400 flex justify-between h-screen">
+    <div *ngIf="Users | async as Users" class="ml-40">
+        <h3>Users </h3>
+        <div class="flex" *ngFor="let user of Users">
+            <p>{{user.Fullname}}</p>
+            <p (click)="deleteUser(user.User_id)" class="ml-20">Deelete</p>
+        </div>
+       
+    </div>
+    <div class="mr-10" >
+        <h3>Questions</h3>
+        <div class="flex">
+            <p>Restaurant developer, creating assessment</p>
+            <p class="ml-20">Delete</p>
+        </div>
+        
+    </div>
+</div>
